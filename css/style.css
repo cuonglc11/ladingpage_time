@@ -1,31 +1,36 @@
-
-/*** Spinner Start ***/ 
 @font-face {
     font-family: 'Quicksand';
-    src:
-    url('../font/Quicksand-Medium.ttf') ;
-
+    src: url('../font/Quicksand-Medium.ttf');
 }
-*{
-    font-family:'Quicksand' ;
 
+* {
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html, body {
     overflow: hidden;
     height: 100%;
-    font-family:'Quicksand' ;
+    width: 100%;
+    font-family: 'Quicksand';
 }
+
 header {
     border-bottom: 1px solid #E4E4E4;
-    height: 11%;
+    height: 11vh;
+    width: 100%;
 }
+
 section {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 11vh - 50px); /* Trừ đi chiều cao của header và footer */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
     -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    padding: 1vh;
 }
 
 footer {
@@ -38,95 +43,94 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: 4rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .sticky-top {
     transition: 0.5s;
     background: var(--bs-white);
 }
+
 .sticky-top.bg-white .navbar .navbar-nav .nav-link:hover,
 .sticky-top.bg-white .navbar .navbar-nav .nav-link.active {
     color: var(--bs-primary);
 }
-.menu_khoang{
+
+.menu_khoang {
     gap: 2rem;
 }
+
 .navbar .navbar-nav .nav-link {
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 16px; /* Use vh for responsiveness */
     transition: .5s;
-    gap: 7rem;
     color: #000000 !important;
     font-weight: 700;
 }
+
 .login-button {
     display: flex;
     padding: 10px 40px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
     border: none;
     border-radius: 99px;
     background: var(--gradient, linear-gradient(90deg, #FF3140 0%, #FF3140 100%));
     color: var(--white, #FFF);
-    font-size: 20px;
-    font-style: normal;
-    /* font-weight: 700; */
-    line-height: normal;
+    font-size: 2vh; /* Use vh for responsiveness */
 }
+
 #navbarCollapse {
     border-top: none;
 }
+
 .layout {
-    opacity: 1;
-    background: url(../img/bg.png)  0px -53.146px / 100% 106.984% no-repeat;
-    flex-shrink: 0;
+    background: url(../img/bg.png) 0px -53.146px / 100% 106.984% no-repeat;
+    display: flex;
     align-items: center;
-    padding: 6rem;
+    padding: 6vh; /* Use vh for responsiveness */
     flex-direction: column;
     justify-content: center;
-
+    height: 100%;
+    width: 100%;
 }
+
 .layout h1 {
     color: var(--092938, #092938);
-    font-size: 48px;
-    font-style: normal;
+    font-size: 4.8vh; /* Use vh for responsiveness */
     font-weight: 700;
-    line-height: 64px;
-    font-family:'Quicksand' ;
+    line-height: 6.4vh; /* Use vh for responsiveness */
 }
+
 .layout h1 span {
     color: var(--ff-3140, #FF3140);
 }
+
 .layout .cotentToken {
     color: var(--092938, #092938);
-    font-size: 20px;
-    font-style: normal;
+    font-size: 2vh; /* Use vh for responsiveness */
     font-weight: 600;
-    line-height: 34px;
-    font-family:'Quicksand' ;
-
+    line-height: 3.4vh; /* Use vh for responsiveness */
 }
+
 .pageHome {
     background: #FFF;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
     border-radius: 40px;
-    height: auto; 
-    width: 700px;
+    width: 90%; /* Đảm bảo chiều rộng linh hoạt */
+    max-width: 70vw; /* Use vw for responsiveness */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2vh; /* Use vh for responsiveness */
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2vh; /* Use vh for responsiveness */
 }
 
 .col {
@@ -144,21 +148,21 @@ footer {
     border-radius: 16px;
     border: 1px solid rgba(9, 41, 56, 0.10);
     background: var(--Color-100, #F2F4F5);
-    padding: 20px;
+    padding: 2vh; /* Use vh for responsiveness */
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px; 
-    width: 100px; 
+    margin: 1vh; /* Use vh for responsiveness */
+    width: 10vw; /* Use vw for responsiveness */
 }
 
 .time-number {
-    font-size: 40px;
+    font-size: 4vh; /* Use vh for responsiveness */
     font-weight: bold;
     color: var(--ff-3140, #FF3140);
 }
 
 .time-unit {
-    font-size: 16px;
+    font-size: 1.6vh; /* Use vh for responsiveness */
     color: #666;
 }
 
@@ -167,8 +171,7 @@ footer {
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0 3vw; /* Use vw for responsiveness */
 }
 
 .info {
@@ -177,72 +180,113 @@ footer {
 }
 
 .usdt-logo {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 2.4vh; /* Use vh for responsiveness */
+    height: 2.4vh; /* Use vh for responsiveness */
+    margin-right: 0.8vh; /* Use vh for responsiveness */
 }
 
 .price, .current-price {
     color: red;
     font-weight: bold;
 }
+
 .form_play {
     width: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-family:'Quicksand' ;
+    padding: 1vh; /* Use vh for responsiveness */
+    margin-top: 2vh; /* Use vh for responsiveness */
 }
+
 .form_play label {
     color: var(--Color-200, #7C9AA8);
-    font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 500;
+    line-height: 2.4vh; /* Use vh for responsiveness */
 }
+
 .usdt_span {
     color: #092938;
-    font-size: 16px;
-font-style: normal;
-font-weight: 700;
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 700;
 }
+
 .listing_price {
     color: var(--092938, #092938);
-    font-size: 16px;
-font-style: normal;
-font-weight: 500;
+    font-size: 16px; /* Use vh for responsiveness */
+    font-weight: 500;
 }
+
 .purch_button {
     width: 100%;
-    padding: 10px;
+    padding: 1vh; /* Use vh for responsiveness */
     border-radius: 16px;
     background: var(--092938, #092938);
     color: var(--White, #FFF);
-    font-size: 18px;
+    font-size: 1.8vh; /* Use vh for responsiveness */
 }
+
 .program_button {
     border-radius: 16px;
     border: 1px solid rgba(9, 41, 56, 0.10);
     background: #FFF;
     width: 100%;
-    padding: 10px;
+    padding: 1vh; /* Use vh for responsiveness */
     color: var(--092938, #092938);
-    font-size: 18px;
-font-style: normal;
-
-font-weight: 700;
+    font-size: 1.8vh; /* Use vh for responsiveness */
+    font-weight: 700;
 }
+
 .img_yahoo {
-    width: 32%;
+    width: 32%; /* Adjust as needed */
 }
-.img_abum {
-    flex-direction: row;
-    margin-top: 1em;
-    width: 29%;
 
+.img_abum {
+    display: flex; /* Thêm thuộc tính này để đảm bảo hình ảnh nằm ngang */
+    flex-direction: row;
+    margin-top: 1vh; /* Use vh for responsiveness */
+    width: 29%; /* Adjust as needed */
 }
+
 .logo_footer {
-    width: 15%;
+    width: 15%; /* Adjust as needed */
 }
+
 .footer_controller {
-    margin-top: 1rem;
+    margin-top: 1vh; /* Use vh for responsiveness */
+}
+
+/* Media Queries for further responsiveness */
+@media (max-width: 768px) {
+    
+html, body {
+    /* overflow: hidden; */
+    height: 100%;
+    width: 100%;
+    font-family: 'Quicksand';
+}
+section {
+    /* height: calc(100vh - 11vh - 50px); Trừ đi chiều cao của header và footer */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* -webkit-overflow-scrolling: touch; */
+    flex-direction: column;
+    padding: 1vh;
+}
+    .layout h1 {
+        font-size: 23px;
+        line-height: 5.4vh;
+    }
+
+    .pageHome {
+        max-width: 90vw;
+    }
+
+    .time-box {
+        width: 15vw;
+    }
+
+    .info-row {
+        flex-direction: column;
+        padding: 0;
+    }
 }
