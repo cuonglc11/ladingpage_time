@@ -11,9 +11,9 @@
 }
 
 html, body {
-    overflow: hidden;
+    /* overflow: hidden;
     height: 100%;
-    width: 100%;
+    width: 100%; */
     font-family: 'Quicksand';
 }
 
@@ -117,13 +117,13 @@ footer {
     background: #FFF;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
     border-radius: 40px;
-    width: 90%; /* Đảm bảo chiều rộng linh hoạt */
-    max-width: 70vw; /* Use vw for responsiveness */
+    width: 55%;
+    max-width: 70vw; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2vh; /* Use vh for responsiveness */
+    padding: 2vh;
 }
 
 .row {
@@ -253,14 +253,23 @@ footer {
 .footer_controller {
     margin-top: 1vh; /* Use vh for responsiveness */
 }
-
+@media (max-width: 1619px) {
+    .pageHome {
+        width: 60%;
+    }
+}
+@media (max-width: 1268px) {
+    .pageHome {
+        width: 70%;
+    }
+}
 /* Media Queries for further responsiveness */
 @media (max-width: 768px) {
     
 html, body {
     /* overflow: hidden; */
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     font-family: 'Quicksand';
 }
 section {
@@ -279,10 +288,18 @@ section {
 
     .pageHome {
         max-width: 90vw;
+        width: 21rem;
     }
 
     .time-box {
         width: 15vw;
+    }
+    .layout .cotentToken {
+        color: var(--092938, #092938);
+        font-size: 2vh;
+        font-weight: 600;
+        line-height: 3.4vh;
+        text-align: center;
     }
 
     .info-row {
